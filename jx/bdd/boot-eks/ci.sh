@@ -6,6 +6,8 @@ export GH_USERNAME="cjxd-bot-test"
 export GH_OWNER="cb-kubecd"
 export GH_EMAIL="jenkins-x@googlegroups.com"
 
+export JX_LOG_LEVEL=debug
+
 # fix broken `BUILD_NUMBER` env var
 export BUILD_NUMBER="$BUILD_ID"
 
@@ -57,9 +59,9 @@ cd boot-source
 
 JX_DOWNLOAD_LOCATION=$(<../jx/CJXD_LOCATION_LINUX)
 
-wget $JX_DOWNLOAD_LOCATION
-tar -zxvf jx-linux-amd64.tar.gz
-export PATH=$(pwd):$PATH
+#wget $JX_DOWNLOAD_LOCATION
+#tar -zxvf jx-linux-amd64.tar.gz
+#export PATH=$(pwd):$PATH
 
 # use the current git SHA being built in the version stream
 if [[ -n "${PULL_PULL_SHA}" ]]; then
