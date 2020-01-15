@@ -17,3 +17,4 @@ clusters:
           - -b
           - -r
           - jx-requirements.yml
+          - --verbose
