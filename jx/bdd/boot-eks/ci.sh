@@ -87,6 +87,9 @@ curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.14
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/0.11.0/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp && \
   mv /tmp/eksctl /usr/local/bin -f
 
+echo Executing jx step bdd in $(pwd)
+jx --version
+
 jx step bdd \
     --use-revision \
     --version-repo-pr \
