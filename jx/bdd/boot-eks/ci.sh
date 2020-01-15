@@ -6,7 +6,7 @@ export GH_USERNAME="cjxd-bot-test"
 export GH_OWNER="cb-kubecd"
 export GH_EMAIL="jenkins-x@googlegroups.com"
 
-#export JX_LOG_LEVEL=debug
+export JX_LOG_LEVEL=debug
 
 # fix broken `BUILD_NUMBER` env var
 export BUILD_NUMBER="$BUILD_ID"
@@ -109,6 +109,5 @@ jx step bdd \
     --no-delete-repo \
     --tests install \
     --tests test-verify-pods \
-    --tests test-create-spring \
     --tests test-supported-quickstarts \
     --tests test-import
